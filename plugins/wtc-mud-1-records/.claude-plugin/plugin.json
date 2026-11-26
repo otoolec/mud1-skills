@@ -1,7 +1,7 @@
 {
   "name": "wtc-mud-1-records",
   "displayName": "WTC MUD #1 public records",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Answer questions about Williamson-Travis Counties MUD No. 1 from its public records on mud1.localboardinfo.com and official statute text, with a page link for every fact.",
   "author": { "name": "otoolec" },
   "homepage": "https://mud1.localboardinfo.com/",

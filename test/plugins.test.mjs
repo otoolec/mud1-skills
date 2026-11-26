@@ -56,3 +56,23 @@ test('no private paths or personal email in published files', () => {
     assert.doesNotMatch(t, /\/mnt\/project-files|C:\\Users\\|@gmail\.com/, f);
   }
 });
+
+// Skill-creator's trigger check must have run, and no review finding may be waived without the owner's OK.
+for (const entry of market.plugins) {
+  const dir = entry.source.replace(/^\.\//, '');
+  for (const s of fs.readdirSync(path.join(root, dir, 'skills'))) {
+    const base = `${dir}/skills/${s}`;
+    test(`${s}: trigger prompts exist, with 8+ that should fire and 8+ near-misses`, () => {
+      const set = JSON.parse(read(`${base}/evals/triggers.json`));
+      assert.ok(set.filter(q => q.should_trigger === true).length >= 8);
+      assert.ok(set.filter(q => q.should_trigger === false).length >= 8);
+    });
+    test(`${s}: REVIEW.md records trigger results`, () => {
+      assert.match(read(`${base}/REVIEW.md`), /^## Trigger test/m);
+    });
+    test(`${s}: every unfixed or partly fixed review finding has the owner's dated OK`, () => {
+      const rows = read(`${base}/REVIEW.md`).split('\n').filter(l => /^\|.*\|\s*(Not fixed|Partly fixed|Deferred)/i.test(l));
+      for (const r of rows) assert.match(r, /owner approved \d{4}-\d{2}-\d{2}/, r);
+    });
+  }
+}

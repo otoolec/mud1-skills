@@ -46,8 +46,24 @@ pages were checked against `/text/<id>.txt` page N by script; every link was che
 | 5b | Assertions circular ("used mud1") | Fixed: fact assertions |
 | 5c | HTTP 200 doesn't catch wrong pages | Fixed: page-content check script |
 | 5d | Fetch-only path untested | Fixed: sun-chase-fetch-only case |
-| 5e | No trigger or near-miss cases | Not fixed: trigger tests need the description-optimizer loop; left for a later pass |
+| 5e | No trigger or near-miss cases | Fixed in 1.0.1: 30 trigger prompts in `evals/triggers.json`, results below |
 | 5f | Untested rules (address leaks, OCR caveat, drafts) | Partly fixed: address leak and OCR caveat graded in parking-votes; draft-vs-adopted not yet tested |
 | 5g | Brittle graders | Fixed: coverage graded at run time, tone not tokens, document named |
 
-Open: more runs per arm (n=1 now), trigger evals, a draft-vs-adopted case.
+Open: more runs per arm (n=1 now), a draft-vs-adopted case.
+
+## Trigger test (1.0.1, 2026-11-26)
+
+skill-creator's `run_eval` (Sonnet, `claude -p`, 3 runs per prompt, fires if 2 of 3 runs load the skill), with only
+this skill installed (`--setting-sources project`). `evals/triggers.json`: 20 "tune" prompts (10 should fire, 10
+near-misses) used to adjust the description, and 10 "held-out" prompts written after the last change.
+
+| Description | Tune set (20) | Held-out (10) | Misses |
+|---|---|---|---|
+| 1.0.0 (long) | 18/20 | not run | missed "which minutes are missing"; fired on an HOA dues question |
+| Short claude.ai card text | 17/20 | 8/10 | missed "which minutes are missing"; fired on bill payment, low water pressure, a bill dispute and a tap fee |
+| 1.0.1 (adds "which ones are missing, for a records request" and "HOAs") | 20/20 | 9/10 | fired on "how much is a new water tap, I need to pay it" (the rate order is a record, so this is borderline) |
+
+Harness note: as shipped, `run_eval` writes every parallel worker's temporary command into one `.claude/commands`
+folder, so each run sees up to 10 copies and usually picks another worker's. That made recall look like 10-20%.
+These numbers use a patched copy that gives each run its own project folder.

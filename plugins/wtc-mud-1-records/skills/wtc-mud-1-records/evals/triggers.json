@@ -1,0 +1,152 @@
+[
+ {
+  "query": "did the wtc mud board ever vote to raise the tax rate above the voter-approval rate? need dates and links for a nextdoor post",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "how did director jones vote on the sun chase park playscape bid back in january 2024",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "our MUD in anderson mill west keeps talking about rescinding old resolutions. what did the board actually vote on in feb 2026?",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "What does the WTC MUD 1 public comment policy say about time limits, and which version is current?",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "find me the williamson-travis counties MUD no. 1 deed restrictions for Anderson Mill West section 4 and what they say about fences",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "is there a map of where the sewer lift stations are in wtc mud #1? which one serves hunters glenn",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "which years of board minutes are missing for wtcmud1? i want to file a records request for the gaps",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "did wtc mud 1 follow the open meetings act when they went into closed session about the lawsuit? show me the minutes and the statute",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "list every overnight street parking vote the wtc mud board has taken, with the split votes",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "who were the directors of WTC MUD #1 in 2021 and who was president",
+  "should_trigger": true,
+  "set": "tune"
+ },
+ {
+  "query": "how do i pay my wtc mud 1 water bill online, the old link is broken",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "when is the next Anderson Mill Limited District board meeting and where is it held",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "Can a Texas city council limit public comment to two minutes per speaker? cite the statute",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "our water pressure has been low all week on Dagama Dr in Cedar Park, who do i call",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "what is the 2026 tax rate for Brushy Creek MUD and how does it compare to last year",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "explain in general how texas municipal utility districts issue bonds and what voters approve",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "what is my property's appraised value on the williamson central appraisal district site for 2026",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "help me write python that scrapes agendas from a city website with beautifulsoup",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "what does the HOA for Volente Hills charge in annual dues",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "is there a boil water notice in cedar park right now",
+  "should_trigger": false,
+  "set": "tune"
+ },
+ {
+  "query": "when did the wtc mud 1 board approve the current street light contract and who seconded it",
+  "should_trigger": true,
+  "set": "held-out"
+ },
+ {
+  "query": "has our anderson mill west MUD ever adopted rules about fences or sheds? i need the actual wording",
+  "should_trigger": true,
+  "set": "held-out"
+ },
+ {
+  "query": "what were wtc mud #1's water rates in 2015, was there a board vote on them",
+  "should_trigger": true,
+  "set": "held-out"
+ },
+ {
+  "query": "i'm writing a public comment for the williamson-travis counties MUD 1 meeting. what has the board said in past minutes about the park pavilion?",
+  "should_trigger": true,
+  "set": "held-out"
+ },
+ {
+  "query": "which drainage easements does wtc mud 1 maintain behind houses on the greenbelt? is there a map",
+  "should_trigger": true,
+  "set": "held-out"
+ },
+ {
+  "query": "find the minutes for travis county MUD no. 2's last budget hearing",
+  "should_trigger": false,
+  "set": "held-out"
+ },
+ {
+  "query": "how much does wtc mud 1 charge for a new water tap, i need to pay it this week",
+  "should_trigger": false,
+  "set": "held-out"
+ },
+ {
+  "query": "what are the rules for running for a MUD board seat in texas in general",
+  "should_trigger": false,
+  "set": "held-out"
+ },
+ {
+  "query": "anderson mill limited district pool hours this summer",
+  "should_trigger": false,
+  "set": "held-out"
+ },
+ {
+  "query": "my wtc mud 1 bill doubled this month, who do i call to dispute it",
+  "should_trigger": false,
+  "set": "held-out"
+ }
+]
