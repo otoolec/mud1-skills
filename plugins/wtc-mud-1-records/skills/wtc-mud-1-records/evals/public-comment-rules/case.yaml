@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: public-comment-rules
+expected_outcome: |
+  States the district's public-comment time limit quoted from the rule or policy on file with a page link, and the state law (Gov't Code 551.007) quoted and linked to the official statute text; not legal advice.

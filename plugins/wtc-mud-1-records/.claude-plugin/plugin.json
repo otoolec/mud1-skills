@@ -1,0 +1,11 @@
+{
+  "name": "wtc-mud-1-records",
+  "displayName": "WTC MUD #1 public records",
+  "version": "1.0.0",
+  "description": "Answer questions about Williamson-Travis Counties MUD No. 1 from its public records on mud1.localboardinfo.com and official statute text, with a page link for every fact.",
+  "author": { "name": "otoolec" },
+  "homepage": "https://mud1.localboardinfo.com/",
+  "repository": "https://github.com/otoolec/mud1-skills",
+  "license": "MIT",
+  "keywords": ["texas", "mud", "water-district", "open-meetings", "public-records"]
+}
