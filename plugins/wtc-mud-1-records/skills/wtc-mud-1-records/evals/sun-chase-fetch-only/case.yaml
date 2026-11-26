@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: sun-chase-fetch-only
+expected_outcome: |
+  With only web fetch and search (no shell), finds the January 17, 2024 motion accepting the Cunningham Recreation bid for the Sun Chase Park playscape, reports it passed 4-1 with Director Jones voting no, and links the minutes page.

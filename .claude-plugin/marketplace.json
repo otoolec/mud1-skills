@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mud1-skills",
+  "description": "Skills that help residents answer questions about Williamson-Travis Counties MUD No. 1 from public records on mud1.localboardinfo.com.",
+  "owner": { "name": "otoolec" },
+  "plugins": [
+    {
+      "name": "wtc-mud-1-records",
+      "source": "./plugins/wtc-mud-1-records",
+      "description": "Answer questions about WTC MUD #1 board votes, minutes, documents, maps and the Texas law behind them, with a page link for every fact.",
+      "category": "productivity",
+      "tags": ["texas", "local-government", "public-records", "water-district"]
+    }
+  ]
+}

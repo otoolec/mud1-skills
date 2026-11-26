@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: rates-2015-coverage
+expected_outcome: |
+  Explains that mud1 holds no 2015 board minutes (coverage.json), so a vote can't be confirmed or ruled out from it; makes no claim that no vote happened; points to the district (public information request, rate orders) for the 2015 record; anything stated about rates cites an opened source.
