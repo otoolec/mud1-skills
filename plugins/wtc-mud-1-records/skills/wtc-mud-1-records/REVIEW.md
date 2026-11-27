@@ -18,11 +18,28 @@ the iteration-2 assertions. Iteration 1 (assertions that mostly checked "cites m
 9/14; the reviewer rightly called that circular, so iteration 2 grades facts instead. Cited `/d/?p=N`
 pages were checked against `/text/<id>.txt` page N by script; every link was checked for HTTP 200.
 
+## Benchmark (iteration 3, 1.0.1, Sonnet subagents, 3 runs per arm per case)
+
+| Case | With skill | Without skill | Notes |
+|---|---|---|---|
+| parking-votes | 18/18 | 9/18 | Baselines (11-13 min each, OCR of district PDFs) found no street-parking vote |
+| public-comment-rules (now 7 graders) | 21/21 | 12/21 | Statute quotes matched tcss text in every with-skill run |
+| rates-2015-coverage | 12/12 | 8/12 | |
+| sun-chase-fetch-only | 12/12 | 3/12 | No baseline found the Jan 17, 2024 vote |
+| draft-length-of-meetings (new) | 15/15 | 3/15 | Baselines found no meeting-length resolution at all |
+| zero-hit-drones (new) | 15/15 | 12/15 | Baselines never named the years held |
+| **Total** | **93/93 (100%)** | **47/93 (51%)** | |
+
+Graded by separate Sonnet agents that re-checked facts against `/text/<id>.txt` and statute text and fetched
+cited links. Limits: graders could not see tool traces, so "fetch only, no shell" is taken from the answers;
+"answer first" graders pass a short wrong answer on structure (draft case baselines). Outputs and
+`grading.json` per case are kept with the project's review files.
+
 ## Opus review (2026-11-26) and what changed
 
 | # | Finding | Outcome |
 |---|---|---|
-| 1a | Overlaps the private district skill on the same district | Not fixed here: the public skill must not name a private one. Fix belongs in the private skill's description (follow-up offered) |
+| 1a | Overlaps the private district skill on the same district | Deferred, owner approved 2026-11-26: the public skill must not name a private one; the owner switches the private skill off when testing the public one |
 | 1b | "near Anderson Mill or Cedar Park" fires on other districts | Fixed: "Anderson Mill West", plus "Not for other districts, even nearby ones" |
 | 1c | No exclusion for bills, outages, upcoming meetings, own tax bill | Fixed in description |
 | 1d | "Texas law behind them" catches generic law questions | Fixed: "what Texas law requires of this district"; general questions excluded |
@@ -47,10 +64,10 @@ pages were checked against `/text/<id>.txt` page N by script; every link was che
 | 5c | HTTP 200 doesn't catch wrong pages | Fixed: page-content check script |
 | 5d | Fetch-only path untested | Fixed: sun-chase-fetch-only case |
 | 5e | No trigger or near-miss cases | Fixed in 1.0.1: 30 trigger prompts in `evals/triggers.json`, results below |
-| 5f | Untested rules (address leaks, OCR caveat, drafts) | Partly fixed: address leak and OCR caveat graded in parking-votes; draft-vs-adopted not yet tested |
+| 5f | Untested rules (address leaks, OCR caveat, drafts) | Fixed in 1.0.1: new cases draft-length-of-meetings and zero-hit-drones; answer-first and statute-quote graders added (iteration 3) |
 | 5g | Brittle graders | Fixed: coverage graded at run time, tone not tokens, document named |
 
-Open: more runs per arm (n=1 now), a draft-vs-adopted case.
+Open: none. Iteration 3 (below) runs every case 3 times per arm.
 
 ## Trigger test (1.0.1, 2026-11-26)
 
