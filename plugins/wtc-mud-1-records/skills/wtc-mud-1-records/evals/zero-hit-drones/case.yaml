@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: zero-hit-drones
+expected_outcome: |
+  No motion about drones exists in the minutes on mud1. The answer says so in terms of the records held
+  ("in the minutes on mud1, years ..., I found no motion"), names the gap years, does not claim the board never
+  voted or that the neighbor is wrong, and points to a public information request for the rest.
