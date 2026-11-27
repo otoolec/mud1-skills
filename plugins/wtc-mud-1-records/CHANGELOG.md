@@ -7,6 +7,7 @@ Each release bumps `version` in `.claude-plugin/plugin.json`. Installed copies u
 - Description now names finding missing minutes for a records request, and excludes HOAs. Trigger test:
   20/20 on the tuning prompts and 9/10 on held-out prompts (1.0.0: 18/20). Prompts in
   `skills/wtc-mud-1-records/evals/triggers.json`.
+- Two new test cases (a draft resolution, a search with no matches) and checks that answers lead with the answer and quote statutes exactly. Every case now runs 3 times per arm: 93/93 with the skill, 47/93 without.
 - Tests: trigger prompts must exist, REVIEW.md must record trigger results, and no review finding may be left
   unfixed without the owner's dated OK.
 
