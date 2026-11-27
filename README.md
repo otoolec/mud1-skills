@@ -26,7 +26,27 @@ Updates: marketplaces outside Anthropic's own don't auto-update by default. Turn
 `scripts/build-zips.sh`) and upload it under Customize > Skills. The app does not check for updates;
 compare your version with the CHANGELOG and upload the new zip when it changes.
 
-**Other AI tools:** point them at https://mud1.localboardinfo.com/llms.txt ↗, the site's plain-text guide.
+**Gemini app** (web, Mac or mobile; 18 or over; not tested): download
+[SKILL.md](https://github.com/otoolec/mud1-skills/blob/main/plugins/wtc-mud-1-records/skills/wtc-mud-1-records/SKILL.md) ↗
+(the download button on that page), then Customize > Skills > Create > Upload, pick the file, and click
+Create. [Google's steps](https://support.google.com/gemini/answer/17094296) ↗
+
+**Gemini in Chrome** (rolling out; not tested): open chrome://skills, then Create > Upload file, and pick
+the same SKILL.md. [Google's steps](https://developer.chrome.com/blog/skills-in-gemini-in-chrome) ↗
+
+**ChatGPT Business, Enterprise, Healthcare or Edu** (if your workspace allows uploads; not tested):
+Plugins > Skills > Create > Upload from your computer, and pick the zip or SKILL.md.
+[OpenAI's steps](https://help.openai.com/en/articles/20001066-skills-in-chatgpt) ↗ OpenAI doesn't list
+skills for personal plans.
+
+**ChatGPT Plus or Pro** (not tested): make a Project, add SKILL.md as a project file, and set its
+instructions to "Follow the attached SKILL.md for questions about WTC MUD #1."
+
+**Any other AI chat that can read web pages** (not tested): paste this at the start.
+
+```
+Read https://mud1.localboardinfo.com/llms.txt and answer my question from the lists it links. Give a mud1 page link for every fact, and say when a record is a draft or is missing.
+```
 
 ## Versions
 

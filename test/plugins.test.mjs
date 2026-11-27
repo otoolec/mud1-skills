@@ -76,3 +76,16 @@ for (const entry of market.plugins) {
     });
   }
 }
+
+test('README explains install for Claude, Gemini, Chrome, ChatGPT and a paste-in prompt for everyone else', () => {
+  const r = read('README.md');
+  assert.match(r, /\*\*Gemini app\b[^*]*\*\*/, 'Gemini app heading');
+  assert.ok(r.includes('Customize > Skills > Create > Upload'), 'Gemini upload path');
+  assert.ok(r.includes('chrome://skills'), 'Gemini in Chrome path');
+  assert.match(r, /ChatGPT[^\n]*(Business|Enterprise)/, 'ChatGPT plan limit');
+  assert.ok(r.includes('Read https://mud1.localboardinfo.com/llms.txt and answer'), 'paste-in prompt');
+  // Only Claude is tested: every other route says so.
+  const others = r.split('## Install')[1].split('## Versions')[0].split(/\n\*\*/).filter(b => /^(Gemini|ChatGPT|Any other)/.test(b));
+  assert.equal(others.length, 5, 'five non-Claude routes');
+  for (const b of others) assert.match(b, /not tested/i, b.slice(0, 40));
+});
